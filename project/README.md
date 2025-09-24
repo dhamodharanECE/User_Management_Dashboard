@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# User Management Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React-based user management dashboard** with CRUD operations (Create, Read, Update, Delete) and local JSON storage using **JSON Server**. This project allows adding, editing, deleting users, and filtering by department.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
+- [API Endpoints](#api-endpoints)
+- [Technologies Used](#technologies-used)
+- [Usage](#usage)
+- [Future Enhancements](#future-enhancements)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- List all users with pagination and search
+- Add new users with validation
+- Edit existing users
+- Delete users
+- Department selection via dropdown
+- Sort users by first name, last name, or email
+- Toast notifications for success/failure
+- Local JSON server for backend simulation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+## Installation
+**Clone the repository**  
+bash
+git clone https://github.com/yourusername/user-management-dashboard.git
+cd user-management-dashboard
+Install dependencies
 
-### `npm run build`
+bash
+Copy code
+npm install
+Install JSON Server (for local backend)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copy code
+npm install -g json-server
+Running the Project
+Start JSON Server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+bash
+Copy code
+json-server --watch db.json --port 5000
+This will run your fake REST API at http://localhost:5000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Start React app
 
-### `npm run eject`
+bash
+Copy code
+npm start
+Open http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React (with hooks: useState, useEffect, useMemo)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Axios (for API calls)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+JSON Server (mock REST API)
 
-## Learn More
+React Toastify (notifications)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+CSS / Flexbox (styling)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+Navigate to Users Page to view all users.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Click Add User to create a new user.
 
-### Analyzing the Bundle Size
+Use the Edit button to update user details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Use the Delete button to remove a user.
 
-### Making a Progressive Web App
+Use the Department dropdown to select user department when adding/editing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Search users by name, email, or department.
 
-### Advanced Configuration
+Paginate users using the dropdown for items per page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project difficulty:
+Use in Copy code:
+Add and Delete and Update function working with
+json-server --watch db.json --port 5000
+This will run your fake REST API at http://localhost:5000.
+run code in Backend server.
